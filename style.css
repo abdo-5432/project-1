@@ -1,0 +1,74 @@
+
+/*for every element */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #efefef;
+}
+nav{
+    display: flex;/*in one line and to can edit */
+    justify-content: space-between;/*space between elements*/
+    /*justify-content: center;center elements horizontally*/
+    align-items: center;/*center elements vertically*/
+    background-color: #1876f2;/*facebook blue*/
+    padding: 5px 10px;/*top and bottom 5px, left and right 10px*/
+    
+    
+}
+.nav-center{
+    display: flex;
+    gap: 40px;/*gap between elements*/
+    margin-left: -30%;/*move to left 90px*/
+}
+.nav-left,.nav-right{
+    display: flex;
+    padding: 0 50px;/*top and bottom 0px, left and right 10px*/
+
+}
+.nav-user-icon img{
+    cursor: pointer;
+    margin-left: 20px;
+    align-items: center;
+}
+.search-box{
+    background-color: #f0f2f5;/*light grey*/
+    border-radius: 20px;/*make it round*/
+    padding: 5px 20px;/*top and bottom 5px, left and right 20px*/
+    display: flex;/*in one line*/
+    align-items: center;/*center vertically*/
+    gap: 10px;/*gap between elements*/
+}
+.search-box input{
+    border: none;/*remove border*/
+    background-color: transparent;/*make background transparent*/
+    outline: none;/*remove outline when focused*/
+    width: 250px;
+}
+.online{
+    position: relative;/*position relative*/
+   
+}
+.online::after{/*means in front of the element there is content*/
+   content: '';
+   width: 7px;
+   height: 7px;
+   border: 2px solid #fff;
+   border-radius: 50%;/*make it round*/
+   background: #41db51;/*green*/
+   position:absolute;/*to put it on the element(if i didn't use position relative in online so the content would be absolute on the whole page)*/
+   top: 0;
+   right: 10px;
+
+}
+.fa-facebook{
+    color: #fff;
+}
+.fa-solid{
+    color: white;
+}
+.fa-magnifying-glass{
+    color: #65676b;/*dark grey*/
+}
