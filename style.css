@@ -55,7 +55,7 @@ nav{
    content: '';
    width: 7px;
    height: 7px;
-   border: 2px solid #fff;
+   border: 2px solid #fff;/*width and style*/
    border-radius: 50%;/*make it round*/
    background: #41db51;/*green*/
    position:absolute;/*to put it on the element(if i didn't use position relative in online so the content would be absolute on the whole page)*/
