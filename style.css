@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 body{
     background-color: #efefef;
@@ -15,8 +16,17 @@ nav{
     align-items: center;/*center elements vertically*/
     background-color: #1876f2;/*facebook blue*/
     padding: 5px 10px;/*top and bottom 5px, left and right 10px*/
-    
-    
+    position: sticky;
+    top: 0%;
+    z-index: 100;/*bach li t7t mnno sticky maydkholch fih mnli nscrolli*/
+    /*كيتحكم فـ الأولية في الظهور 
+    (stacking order) 
+    ديال العناصر اللي كيتقاطعوا (تغطّي واحد على الآخر). العنصر اللي عندو 
+    z-index
+     أكبر كيجي فوق العنصر اللي 
+    z-index 
+    ديالو أقل*/
+    /*WALAKIN MAWLLACH STICKY T7T NAV-BAR B7ALI WLLA B7AL MAIN-CONTENT*/
 }
 .nav-center{
     display: flex;
@@ -27,6 +37,9 @@ nav{
     display: flex;
     padding: 0 50px;/*top and bottom 0px, left and right 10px*/
 
+}
+.nav-left{
+    margin-left: 3px;
 }
 .nav-user-icon img{
     cursor: pointer;
@@ -71,4 +84,65 @@ nav{
 }
 .fa-magnifying-glass{
     color: #65676b;/*dark grey*/
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+}
+.left-sidebar{
+   
+    position: sticky;/*because it will not move when i scroll,voir bro code*/
+    top: 70px;/*to be sticked at the top while scrolling/walakin mli drt z-index ma b9ach top*/
+    flex-basis: 25%;
+    align-self: flex-start;/*?*/
+    /*height: 100vh;/*db 3ad bant background*/
+   
+}
+.right-sidebar{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    color: #626262;
+    position: sticky;
+    top: 70px;
+    flex-basis: 25%;/*width;mais si je fais width lktba ghadi tkhroj mn div mn 3la right walakin hna maktkhrojch o kitwal mn left */
+    align-self: flex-start;
+    
+}
+.main-content{  
+flex-basis: 47%;
+
+}
+.imp-links a, .shortcut-links a{
+    text-decoration: none;
+    display: flex;/*kolla icon o 7daha lklma*/
+    align-items: center;
+    margin-bottom: 30px;
+    color: #626262;
+    width:fit-content  ;/*"خلي العرض (الطول الأفقي) ديال العنصر يكون قدّ المحتوى اللي فيه فقط، ماشي أكثر."/mais hna ma khdmatch*/
+
+}
+.imp-links a i{
+width: 15px;
+margin-right: 15px;
+color: #1876f2;;
+}
+.imp-links a:last-child{
+    color: #1876f2;
+}
+.imp-links{
+    border-bottom: 1px solid #ccc;
+}
+.shortcut-links a img{
+    width: 40px;
+    margin-right: 15px;
+    border-radius:4px ;
+}
+.shortcut-links p{
+    margin: 25px 0;
+    color: #626262;
+    
 }
